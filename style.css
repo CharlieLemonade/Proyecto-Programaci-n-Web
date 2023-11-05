@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif; /* Aplicar 'Lexend' a toda la tipografía */
+}
+
+body
+{
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+}
+
+.menu-item, .login {
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    padding: 5px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.menu-item {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+.login {
+    background-color: #D1FAE5;
+}
+
+.menu {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space between;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 80px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    display: flex;
+    list-style: none;
+    margin-right: 40px;
+    z-index: 100;
+}
+
+header ul li a, header ul li:last-child a {
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+header ul li:last-child a {
+    color: #047857;
+    transition: all 0.5s ease;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space between;
+    align-items: center;
+}
+
+.content .textbox {
+    position: relative;
+    max-width: 600px;
+}
+
+.content .textbox h2 {
+    color: #1B1C57;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.content .textbox p {
+    color: #626687;
+    font-size: 16px;
+}
+
+.imgBox img {
+    position: absolute;
+    width: 650px;
+    height: 500px;
+    border-radius: 0 0 0 30px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #82FFD2;
+    clip-path: circle(300px at 0% 0%);
+    top: 0;
+    left: 0;
+    filter: opacity(0.30);
+
+}
+
+
+.footer {
+    padding: 80px 13% 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #0E1735;
+}
+
+.footer-content h4 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+}
+
+.footer-content li {
+    margin-bottom: 16px;
+    list-style: none;
+}
+
+.footer-content li a {
+    text-decoration: none;
+    display: block;
+    color: #888B97;
+    font-size: 14px;
+    font-weight: lighter;
+    transition: all 0.4s ease;
+}
+
+.footer-content li a:hover {
+    transform: translateY(-3px) translateX(-5px);
+    color: white;
+}
+
+.footer-content p {
+    color: white;
+    font-size: 14px;
+}
+
+.icons{
+    margin: 20px 0;
+}
+
+.icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+#Rotating-image {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  #Rotating-image:hover {
+    transform: scale(1.05); /* Realiza un ligero aumento al pasar el cursor sobre la imagen */
+  } 
+
+.slider
+  {
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+  }
+section .swiper-slide-card .card-image
+{
+    height: 300px;
+    width: 300px;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+section .swiper-slide-card .card-image img
+{
+    
+    height: 95%;
+    width: 95%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.swiper-slide-card
+{   
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px 0;
+    width: 350px;
+}
+
+.swiper-slide-card::before
+{
+    content: "";
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    background: rgb(14, 23, 53, 0.8);
+    border-radius: 20px 20px 0 0;
+}
+
+.swiper-slide-card .card-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+}
+
+.swiper-slide-card .slider-icons
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-slide-card .slider-icons i
+{
+    color: #ffffff;
+    opacity: 0.6;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.swiper-slide-card .slider-icons i:hover
+{
+    opacity: 1;
+}
+
+.swiper-slide-card .place-name
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    color: black;
+}
+
+.place-name .name
+{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.place-name .price
+{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.swiper-slide-card .rating
+{
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+
+}
+
+.swiper-slide-card .rating i
+{
+    font-size: 15px;
+    margin: 0 10px;
+    color: white;
+}
+
+.swiper-slide-card .button
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2px;
+}
+
+.swiper-slide-card .button button
+{
+    background: #047857;
+    outline: none;
+    border: none; 
+    color: #ffff;
+    padding: 8px 20px;
+    border-radius: 15px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button button:hover
+{
+    background: rgb(4, 120, 87, 0.70);
+}
+
+.swiper
+{
+ width: 400px;
+}
+
+
